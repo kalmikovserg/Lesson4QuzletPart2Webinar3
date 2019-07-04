@@ -10,7 +10,8 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
-    var curentCustion = 0
+    var curentQuestion = 0
+    var questions: [Question]!
     
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var firstStackView: UIStackView!
@@ -21,12 +22,13 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        questions = Question.all
        updateUI()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
         updateUI()
-        switch curentCustion {
+        switch curentQuestion {
         case 0:
             firstStackView.isHidden = false
         case 1:
@@ -36,12 +38,14 @@ class QuestionViewController: UIViewController {
         default:
             performSegue(withIdentifier: "resultSegue", sender: nil)
         }
-        curentCustion += 1
+        curentQuestion += 1
    }
     
     private func updateUI() {
         firstStackView.isHidden = true
         secondStackView.isHidden = true
         thirdStackView.isHidden = true
+        
+        navigationItem.title = "  Вопрос № \(curentQuestion + 1) из \(questions.count)"
     }
 }
