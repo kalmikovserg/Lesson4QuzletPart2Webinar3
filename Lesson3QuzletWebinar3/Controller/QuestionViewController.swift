@@ -10,7 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
-    var curentQuestion = 0
+    var questionIndex = 0
     var questions: [Question]!
     
     @IBOutlet var questionLabel: UILabel!
@@ -23,29 +23,51 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questions = Question.all
-       updateUI()
+        updateUI()
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
+        
         updateUI()
-        switch curentQuestion {
-        case 0:
-            firstStackView.isHidden = false
-        case 1:
-            thirdStackView.isHidden = false
-        case 2:
-            secondStackView.isHidden = false
-        default:
-            performSegue(withIdentifier: "resultSegue", sender: nil)
+//        switch questionIndex {
+//        case 0:
+//            firstStackView.isHidden = false
+//        case 1:
+//            thirdStackView.isHidden = false
+//        case 2:
+//            secondStackView.isHidden = false
+//        default:
+//
+//        }
+        nextQuestion()
+    }
+    
+    func nextQuestion() {
+       
+        questionIndex += 1
+        if questionIndex < questions.count {
+            updateUI()
         }
-        curentQuestion += 1
-   }
+        performSegue(withIdentifier: "resultSegue", sender: nil)
+    }
     
     private func updateUI() {
+        
         firstStackView.isHidden = true
         secondStackView.isHidden = true
         thirdStackView.isHidden = true
         
-        navigationItem.title = "  Вопрос № \(curentQuestion + 1) из \(questions.count)"
+        navigationItem.title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+        
+        let currentQuestion = questions[questionIndex]
+        
+        switch currentQuestion.type {
+        case .single:
+            firstStackView.isHidden = false
+        case .multiple:
+            thirdStackView.isHidden = false
+        case .range:
+            thirdStackView.isHidden = false
+        } 
     }
 }

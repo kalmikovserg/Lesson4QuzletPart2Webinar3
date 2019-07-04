@@ -29,8 +29,8 @@ struct Question {
             Question.init(text: "Хотите ли вы в отпуск?", type: .range, answer: [
                 Answer(text: "Да, уже почти", type: .happy),
                 Answer(text: "В следующем году", type: .single),
-                Answer(text: "Не хочу", type: .timeForVacation),
-                Answer(text: "Хочу стать главным начальником", type: .depression),
+                Answer(text: "Да, уже пора", type: .timeForVacation),
+                Answer(text: "Зачем мне это?", type: .depression),
                 ])
         ]
     }
