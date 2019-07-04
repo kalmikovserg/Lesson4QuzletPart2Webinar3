@@ -29,18 +29,12 @@ class QuestionViewController: UIViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         
         updateUI()
-//        switch questionIndex {
-//        case 0:
-//            firstStackView.isHidden = false
-//        case 1:
-//            thirdStackView.isHidden = false
-//        case 2:
-//            secondStackView.isHidden = false
-//        default:
-//
-//        }
         nextQuestion()
     }
+    
+    @IBAction func singleButtonPress(_ sender: UIButton) {
+    }
+    
     
     func nextQuestion() {
        
