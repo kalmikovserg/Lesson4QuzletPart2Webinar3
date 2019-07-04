@@ -6,8 +6,7 @@
 //  Copyright © 2019 Сергей Калмыков. All rights reserved.
 //
 
- enum ResponsType {
-   
+ enum ResponsType {   
     case single
     case multiple
     case range

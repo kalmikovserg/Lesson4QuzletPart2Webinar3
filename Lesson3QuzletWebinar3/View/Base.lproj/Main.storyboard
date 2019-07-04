@@ -86,32 +86,44 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VvN-Cf-bb9">
-                                <rect key="frame" x="20" y="368" width="374" height="180"/>
+                                <rect key="frame" x="20" y="346" width="374" height="224"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-Iw-7Cw">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="singleButtonPress:" destination="ZEH-95-V3l" eventType="touchUpInside" id="pe8-u5-ksg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKu-qr-aXZ">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="61" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="singleButtonPress:" destination="ZEH-95-V3l" eventType="touchUpInside" id="Wla-Vh-XoR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQp-2d-5M3">
-                                        <rect key="frame" x="0.0" y="100" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="122" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="singleButtonPress:" destination="ZEH-95-V3l" eventType="touchUpInside" id="Zhe-ra-54k"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNU-lC-xYt">
-                                        <rect key="frame" x="0.0" y="150" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="183" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="singleButtonPress:" destination="ZEH-95-V3l" eventType="touchUpInside" id="Lcs-m9-dMR"/>
                                         </connections>
@@ -251,6 +263,16 @@
                         <outlet property="questionLabel" destination="ChO-oH-sVv" id="1Mg-71-x6Y"/>
                         <outlet property="secondStackView" destination="64c-9F-arc" id="gxe-Ij-teT"/>
                         <outlet property="thirdStackView" destination="9TH-R6-U08" id="060-i8-NNf"/>
+                        <outletCollection property="singleButtons" destination="NAP-Iw-7Cw" collectionClass="NSMutableArray" id="AG8-s9-68U"/>
+                        <outletCollection property="singleButtons" destination="fKu-qr-aXZ" collectionClass="NSMutableArray" id="263-sa-G47"/>
+                        <outletCollection property="singleButtons" destination="OQp-2d-5M3" collectionClass="NSMutableArray" id="3jq-ke-abe"/>
+                        <outletCollection property="singleButtons" destination="yNU-lC-xYt" collectionClass="NSMutableArray" id="v0Z-ud-BSH"/>
+                        <outletCollection property="multiLabels" destination="vfg-dN-akF" collectionClass="NSMutableArray" id="R88-Lw-TOm"/>
+                        <outletCollection property="multiLabels" destination="SWz-l4-kWw" collectionClass="NSMutableArray" id="lht-3F-NB5"/>
+                        <outletCollection property="multiLabels" destination="3hL-W7-Qbv" collectionClass="NSMutableArray" id="bDg-CO-HWR"/>
+                        <outletCollection property="multiLabels" destination="GA9-2A-sF9" collectionClass="NSMutableArray" id="mhy-qv-yr1"/>
+                        <outletCollection property="rangeLabel" destination="Z2O-oX-aYK" collectionClass="NSMutableArray" id="R2j-Xa-Zdq"/>
+                        <outletCollection property="rangeLabel" destination="b3H-0K-ZDD" collectionClass="NSMutableArray" id="XXt-SO-gVS"/>
                         <segue destination="awb-ny-cOJ" kind="show" identifier="resultSegue" id="4Yd-p8-iSH"/>
                     </connections>
                 </viewController>

@@ -6,8 +6,7 @@
 //  Copyright © 2019 Сергей Калмыков. All rights reserved.
 //
 
-struct Question {    
-    
+struct Question {        
     var text: String
     var type: ResponsType
     var answer: [Answer]

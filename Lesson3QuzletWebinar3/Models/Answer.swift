@@ -6,8 +6,7 @@
 //  Copyright © 2019 Сергей Калмыков. All rights reserved.
 //
 
-struct Answer {
-   
+struct Answer {   
     var text: String
     var type: QualityLife
 }

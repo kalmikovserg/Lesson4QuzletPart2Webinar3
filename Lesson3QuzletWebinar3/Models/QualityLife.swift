@@ -7,7 +7,6 @@
 //
 
 enum QualityLife {
-    
     case happy
     case single
     case depression
@@ -15,7 +14,6 @@ enum QualityLife {
 }
 
 extension QualityLife {
-    
     var definition: String {
         
         var retValue = ""
