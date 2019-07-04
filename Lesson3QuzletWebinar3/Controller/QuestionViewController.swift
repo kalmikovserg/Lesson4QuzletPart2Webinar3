@@ -47,8 +47,9 @@ class QuestionViewController: UIViewController {
         questionIndex += 1
         if questionIndex < questions.count {
             updateUI()
-        }
+        }else {
         performSegue(withIdentifier: "resultSegue", sender: nil)
+        }
     }
     
     private func updateUI() {
@@ -67,7 +68,7 @@ class QuestionViewController: UIViewController {
         case .multiple:
             thirdStackView.isHidden = false
         case .range:
-            thirdStackView.isHidden = false
-        } 
+            secondStackView.isHidden = false
+        }
     }
 }
