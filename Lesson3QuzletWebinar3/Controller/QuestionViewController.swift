@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {    
+class QuestionViewController: UIViewController {
     
     var questionIndex = 0
     var questions: [Question]!
@@ -20,7 +20,9 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet var singleButtons: [UIButton]!
     
+    @IBOutlet var rangSlider: UISlider!
     @IBOutlet var rangeLabel: [UILabel]!
+    
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var firstStackView: UIStackView!
     @IBOutlet var secondStackView: UIStackView!
@@ -35,18 +37,29 @@ class QuestionViewController: UIViewController {
         updateUI()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "resultSegue" else { return }
+        let destination = segue.destination as! ResultViewController
+        destination.responses = answersChosen
+    }
+    
     @IBAction func nextButton(_ sender: UIButton) {
-         updateUI()
         
+        updateUI()
         if questionIndex == 1 {
-            for (index, stackView) in thirdStackView.arrangedSubviews.enumerated() {
-                guard let stackView = view as? UIStackView else { continue }
+            for (index, stackViews) in thirdStackView.arrangedSubviews.enumerated() {
+                guard let stackView = stackViews as? UIStackView else { continue }
                 guard let swicthView = stackView.arrangedSubviews.last as? UISwitch else { continue }
                 if swicthView.isOn {
                     let currentAnswer = currentAnswers[index]
                     answersChosen.append(currentAnswer)
                 }
             }
+        }
+        if questionIndex == 2 {
+            let index = Int(round(rangSlider.value * Float(currentAnswers.count - 1)))
+            let  answer = currentAnswers[index]
+            answersChosen.append(answer)
         }
         nextQuestion()
     }
@@ -55,6 +68,13 @@ class QuestionViewController: UIViewController {
         guard let answerIndex = singleButtons.firstIndex(of: sender) else { return }
         let answer = currentAnswers[answerIndex]
         answersChosen.append(answer)
+        nextQuestion()
+    }
+    
+    @IBAction func sliderActions(_ sender: UISlider) {
+        let step = 1 / Float(currentAnswers.count - 1)
+        let index = round(rangSlider.value * Float(currentAnswers.count - 1))
+        sender.value = step * index
     }
     
     func nextQuestion() {

@@ -15,6 +15,7 @@
 		BF4C92EA22CD737100D71411 /* ResponsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C92E922CD737100D71411 /* ResponsType.swift */; };
 		BF4C92EC22CD74BD00D71411 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C92EB22CD74BD00D71411 /* Answer.swift */; };
 		BF4C92EE22CD754500D71411 /* QualityLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C92ED22CD754500D71411 /* QualityLife.swift */; };
+		BF4C92F222CEAA5500D71411 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4C92F122CEAA5500D71411 /* Support.swift */; };
 		BFAB29E422C911F300C8276B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB29E322C911F300C8276B /* AppDelegate.swift */; };
 		BFAB29E922C911F300C8276B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAB29E722C911F300C8276B /* Main.storyboard */; };
 		BFAB29EE22C911F500C8276B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAB29EC22C911F500C8276B /* LaunchScreen.storyboard */; };
@@ -29,6 +30,7 @@
 		BF4C92E922CD737100D71411 /* ResponsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsType.swift; sourceTree = "<group>"; };
 		BF4C92EB22CD74BD00D71411 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		BF4C92ED22CD754500D71411 /* QualityLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityLife.swift; sourceTree = "<group>"; };
+		BF4C92F122CEAA5500D71411 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		BFAB29E022C911F300C8276B /* Lesson3QuzletWebinar3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson3QuzletWebinar3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAB29E322C911F300C8276B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAB29E822C911F300C8276B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				BF4C92E922CD737100D71411 /* ResponsType.swift */,
 				BF4C92EB22CD74BD00D71411 /* Answer.swift */,
 				BF4C92ED22CD754500D71411 /* QualityLife.swift */,
+				BF4C92F122CEAA5500D71411 /* Support.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				BF4C92EE22CD754500D71411 /* QualityLife.swift in Sources */,
 				BF03753722C98A9900D7BED3 /* QuestionViewController.swift in Sources */,
 				BF03753922C98AC200D7BED3 /* ResultViewController.swift in Sources */,
+				BF4C92F222CEAA5500D71411 /* Support.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

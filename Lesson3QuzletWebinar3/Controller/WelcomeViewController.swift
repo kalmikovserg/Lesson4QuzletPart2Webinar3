@@ -9,6 +9,10 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        Support.nameUser = nameLabel.text
+    }
     @IBOutlet var nameLabel: UITextField!
     
     @IBAction func unwin(_ segue: UIStoryboardSegue) {
