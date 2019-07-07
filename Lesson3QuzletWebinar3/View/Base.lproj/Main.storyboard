@@ -288,7 +288,7 @@
         <scene sceneID="eXV-oZ-ngS">
             <objects>
                 <viewController id="awb-ny-cOJ" customClass="ResultViewController" customModule="Lesson3QuzletWebinar3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3dZ-vq-sVB">
+                    <view key="view" contentMode="scaleToFill" id="3dZ-vq-sVB" userLabel="ViewMy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -301,21 +301,70 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDj-38-FQd">
+                                <rect key="frame" x="276" y="671" width="87" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="yNO-xW-O4R"/>
+                                </constraints>
+                                <state key="normal" image="Write Button"/>
+                                <connections>
+                                    <action selector="writeAction:" destination="awb-ny-cOJ" eventType="touchUpInside" id="fR9-3S-l30"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажми на мел судьбы и задай вопрос" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-nr-ohP">
+                                <rect key="frame" x="54.5" y="437.5" width="305.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000000000001" tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-dj-OLd">
+                                <rect key="frame" x="10" y="158.5" width="394" height="482.5"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRt-sp-gBX">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="482.5"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="eRt-sp-gBX" firstAttribute="leading" secondItem="dAm-dj-OLd" secondAttribute="leading" id="TL5-ZQ-eVS"/>
+                                    <constraint firstAttribute="bottom" secondItem="eRt-sp-gBX" secondAttribute="bottom" id="TwT-Av-NR1"/>
+                                    <constraint firstItem="eRt-sp-gBX" firstAttribute="top" secondItem="dAm-dj-OLd" secondAttribute="top" id="Xc1-uT-249"/>
+                                    <constraint firstAttribute="trailing" secondItem="eRt-sp-gBX" secondAttribute="trailing" id="xUd-l2-BAc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="G05-Lg-7bF" firstAttribute="bottom" secondItem="iDj-38-FQd" secondAttribute="bottom" multiplier="1.1" constant="31.499999999999886" id="1da-Vf-JmE"/>
                             <constraint firstItem="hSB-rQ-db3" firstAttribute="leading" secondItem="G05-Lg-7bF" secondAttribute="leading" id="2Ic-JX-5sj"/>
                             <constraint firstItem="G05-Lg-7bF" firstAttribute="trailing" secondItem="hSB-rQ-db3" secondAttribute="trailing" id="2af-i9-1ok"/>
+                            <constraint firstItem="iDj-38-FQd" firstAttribute="top" secondItem="dAm-dj-OLd" secondAttribute="bottom" constant="30" id="438-i1-TPd"/>
+                            <constraint firstItem="dAm-dj-OLd" firstAttribute="leading" secondItem="G05-Lg-7bF" secondAttribute="leading" constant="10" id="FlJ-FR-gx7"/>
+                            <constraint firstItem="6Gw-nr-ohP" firstAttribute="centerX" secondItem="3dZ-vq-sVB" secondAttribute="centerX" id="GWy-48-VgL"/>
                             <constraint firstItem="7Y2-yh-kXd" firstAttribute="top" secondItem="G05-Lg-7bF" secondAttribute="top" constant="10" id="KQG-lQ-J4N"/>
                             <constraint firstItem="7Y2-yh-kXd" firstAttribute="leading" secondItem="G05-Lg-7bF" secondAttribute="leading" constant="10" id="Lwp-0a-Zmt"/>
+                            <constraint firstItem="G05-Lg-7bF" firstAttribute="trailing" secondItem="dAm-dj-OLd" secondAttribute="trailing" constant="10" id="U7l-2W-8jE"/>
+                            <constraint firstItem="dAm-dj-OLd" firstAttribute="top" secondItem="7Y2-yh-kXd" secondAttribute="bottom" constant="40" id="ZT8-pQ-OYd"/>
                             <constraint firstItem="G05-Lg-7bF" firstAttribute="bottom" secondItem="hSB-rQ-db3" secondAttribute="bottom" id="Zf5-pZ-2d9"/>
+                            <constraint firstItem="G05-Lg-7bF" firstAttribute="trailing" secondItem="iDj-38-FQd" secondAttribute="trailing" constant="51" id="aHc-Kr-0Pf"/>
+                            <constraint firstItem="iDj-38-FQd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G05-Lg-7bF" secondAttribute="leading" multiplier="1.5" constant="276" id="crR-e5-hTu"/>
                             <constraint firstItem="hSB-rQ-db3" firstAttribute="top" secondItem="G05-Lg-7bF" secondAttribute="top" id="q5x-oZ-aFR"/>
+                            <constraint firstItem="6Gw-nr-ohP" firstAttribute="centerY" secondItem="3dZ-vq-sVB" secondAttribute="centerY" id="qos-WG-GGD"/>
                             <constraint firstItem="G05-Lg-7bF" firstAttribute="trailing" secondItem="7Y2-yh-kXd" secondAttribute="trailing" constant="10" id="yqw-MX-A6V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G05-Lg-7bF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Сhange life" id="WnE-3H-dTj">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;&lt; I do not want" id="p8W-Mh-j6L"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;&lt; I do not want" image="Burger" id="p8W-Mh-j6L">
+                            <connections>
+                                <action selector="burgerAction:" destination="awb-ny-cOJ" id="zA3-NE-K9m"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done &gt;&gt;" id="BFw-c3-Qzp">
                             <connections>
                                 <segue destination="JWf-hp-Myk" kind="unwind" unwindAction="unwin:" id="TBT-EN-GfP"/>
@@ -323,7 +372,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelFate" destination="6Gw-nr-ohP" id="KZn-zh-WYj"/>
                         <outlet property="resaltLabel" destination="7Y2-yh-kXd" id="uJU-BK-afo"/>
+                        <outlet property="webPage" destination="eRt-sp-gBX" id="gm4-3J-XW2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="js3-BC-6cp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,9 +403,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Burger" width="54" height="39"/>
         <image name="Button 2" width="250" height="50"/>
         <image name="Button 3" width="250" height="50"/>
         <image name="Main" width="414" height="896"/>
+        <image name="Write Button" width="130" height="129"/>
         <image name="iPhone XR" width="896" height="414"/>
         <image name="queth" width="414" height="896"/>
     </resources>
